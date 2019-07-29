@@ -6,8 +6,8 @@ Service OpsWorks
 
 Add Stack:
 	• Choose deployment servers
-	• Git Repo for chef 
-		https://github.com/immasud/AWS/wordpress522_chef
+	• Enter below Git Repo for chef 
+		https://github.com/immasud/AWS/tree/master/wordpress_chef
 	
 
 
