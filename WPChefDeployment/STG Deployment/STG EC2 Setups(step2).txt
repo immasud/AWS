@@ -1,0 +1,44 @@
+SET UP STG Environment:
+		
+Task 8:
+	• Setup STG Server
+		? Login to STG Server
+		? Install components needed (See Commands-Config1.txt)
+		? Enable Modules for apache
+		? Mcrypt for PHP 
+		? Modify default config for apache (See Commands-Config1.txt)
+		? Restart Apache
+
+Task 9:
+Login to apache of STG by using public IP
+	• Setup the DB
+		? Will need the endpoint from RDS Dashboard
+		? Keep Admin password in the KeePass
+	• Run the Wordpress install
+		? Enter password
+		? Keep password in keepass
+		? Emails 
+		? Wordpress setup is now complete
+	• Test by logging in to the Wordpress 
+
+		
+	
+Task 10:
+Setup Plugins
+	• Activate:
+		? AWS webservices
+	• Enter AWS key details
+	• Configure S3 and CDN (CloudFront)
+
+Task 11:
+Edit wp-config.php file
+	1. Add Elasticache REDIS config
+	2. Get the endpoint details for EC
+	3. Add below to the wp-config file
+		a. Define ('WP_REDIS_HOST', 'EndPoint details goes here');
+
+Task 12:
+	• Activate EC plugin
+	• Redis object Cache details required
+		? Host Name
+		? Port Number

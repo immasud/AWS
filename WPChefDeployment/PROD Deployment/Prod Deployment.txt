@@ -1,0 +1,49 @@
+Production Deployment:
+
+Use OpsWorks with CHEF to automate deployment to Production:
+
+Service OpsWorks
+
+Add Stack:
+	• Choose deployment servers
+	• Git Repo for chef
+	
+
+
+Add Layer:
+	• PHP App Server
+	• Security Group 
+		? EC2 Production
+		? ELB
+		? Network tab, enable public IP
+		? Recipes (GitHub repo link for CHEF)
+			§ Custom recipes
+				? Wplogin::default
+				? Wpconfig::default
+		? Add app:
+			§ Provide Git Hub repo link for wordpress app.
+		? Add instances:
+			§ Choose Size of the VM's
+			§ Choose AZ
+			§ Add as many instances required 
+
+
+Create CDN
+	• Open CloudFront Service:
+		? Create Distribution
+			§ Origin Domain Name = ELB configured on step 3
+
+Edit wp-config.php in GitHub
+Modify WP_HOME and WP_SITEURL value with CDN
+Committ change in github
+
+
+
+At OpsWork Dashboard
+	• Select Layer the Wordpress
+	• Deployments
+	• Run commands 
+		? Update custom cookbook on all Production servers
+	• Run commands 
+		? Execute recipes
+			§ Woconfig::default

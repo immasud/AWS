@@ -1,0 +1,58 @@
+ask 1:
+Create VPC
+Subnets: 172.30.0.0 / 16
+
+Task 2:
+Security Groups:
+PROD (Port 80)
+STG (Port 80,22)
+ELB (All inbound on port 80)
+RDS (MySQL Port 3306)
+REDIS (Port 6379)
+
+
+Task 3:
+Create Load balancer:
+	• Select VPC
+	• Select all subnets
+	• Configure Health Check
+
+Task 4:
+	• Create RDS
+	• Create DB Subnet Group
+		? Add VPC
+		? AZ (Availability Zone if required)
+		? Add all subnets
+	• Launch DB instance
+		? Specify details for MySQL
+		? Choose Multi AZ if required
+		? Add Master Password to KeePass
+		? Advance Settings for
+			§ DB Name
+			§  Security Groups
+			§ Port 
+			§ Encryption
+			§ Backups
+	
+Task 5:
+	• Setup ElastiCache (REDIS)
+		? Create Subnet group
+			§ Add all subnets
+		? Create Cluster
+			§ Select REDIS
+				? Assign Port or keep default
+				? Enable Replication and Multi AZ (if required)
+				? Cluster Name
+				? Node type (Micro for STG)
+				? Advance Stettings for:
+					® AZ
+					® VPC details
+					® Security Group (REDIS)
+					® SNS
+		
+Task 6:
+	• Setup S3 Buckets for contents
+		? Select Name (need to be unique)
+		? Region
+		? Setup permission
+		? Policy or CORS config
