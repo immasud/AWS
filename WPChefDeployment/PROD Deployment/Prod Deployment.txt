@@ -22,7 +22,8 @@ Add Layer:
 				? Wplogin::default
 				? Wpconfig::default
 		? Add app:
-			§ Provide Git Hub repo link for wordpress app.
+			§ Provide below Git Hub repo link for wordpress app.
+			https://github.com/immasud/WordPress
 		? Add instances:
 			§ Choose Size of the VM's
 			§ Choose AZ
