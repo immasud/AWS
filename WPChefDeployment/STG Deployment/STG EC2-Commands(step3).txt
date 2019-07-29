@@ -26,7 +26,7 @@ rm -rf *
 cd ../
 mkdir staging
 cd staging
-git clone https://github.com/immasud/AWS/wordpress522.git .
+git clone https://github.com/immasud/wordpress.git .
 chmod -R 744 .
 chown -R www-data:www-data .
 
